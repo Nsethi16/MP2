@@ -8,7 +8,7 @@ app = Flask(__name__)
 def handle_requests():
     if request.method == "POST":
         # Create a separate process for running stress_cpu.py
-        subprocess.Popen(["python3", "/home/ubuntu/MP2/stress_cpu.py"])
+        subprocess.Popen(["python3", "stress_cpu.py"])
 
         return jsonify({"message": "Stress CPU process started successfully"})
 
